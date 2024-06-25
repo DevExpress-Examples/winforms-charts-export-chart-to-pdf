@@ -2,6 +2,7 @@
 ![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/324186522/19.2.10%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T960544)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+[![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
 <!-- default file list -->
 *Files to look at*:
@@ -32,3 +33,10 @@ Follow the steps below to implement this scenario:
 * Handle the first button's [Click](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control.click?view=net-5.0) event and use the [ChartControl.IsPrintingAvailable](https://docs.devexpress.com/WindowsForms/DevExpress.XtraCharts.ChartControl.IsPrintingAvailable) property to check whether the chart can be exported. Call the [ChartControl.ExportToPdf(String, PdfExportOptions)](https://docs.devexpress.com/WindowsForms/DevExpress.XtraCharts.ChartControl.ExportToPdf(System.String-DevExpress.XtraPrinting.PdfExportOptions)) method to export the chart to a file. Pass the path to this file as the first parameter to the **ExportToPdf** method. Create an instance of the [PdfExportOptions](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.PdfExportOptions) class to specify export settings. Set the [PdfExportOptions.ConvertImagesToJpeg](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.PdfExportOptions.ConvertImagesToJpeg) property to **false** to export the chart in the vector-based format. Pass the **PdfExportOptions** instance as the second parameter to the **ExportToPdf** method.  
 
 * Handle the second button's [Click](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control.click?view=net-5.0) event and use the [ChartControl.IsPrintingAvailable](https://docs.devexpress.com/WindowsForms/DevExpress.XtraCharts.ChartControl.IsPrintingAvailable) property to check whether the chart can be exported. Call the [ChartControl.ExportToPdf(System.IO.Stream)](https://docs.devexpress.com/WindowsForms/DevExpress.XtraCharts.ChartControl.ExportToPdf(System.IO.Stream)) method to export the chart to a stream. This example uses [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-5.0), and you can open the file where the stream is saved to check the export result.
+<!-- feedback -->
+## Does this example address your development requirements/objectives?
+
+[<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-charts-export-chart-to-pdf&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-charts-export-chart-to-pdf&~~~was_helpful=no)
+
+(you will be redirected to DevExpress.com to submit your response)
+<!-- feedback end -->
